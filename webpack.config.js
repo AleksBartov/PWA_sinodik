@@ -12,7 +12,7 @@ module.exports = (env, argv) => ({
     },
     devtool: argv.mode === 'production' ? false : 'source-map',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         chunkFilename:
             argv.mode === 'production'
                 ? 'chunks/[name].[chunkhash].js'
@@ -41,7 +41,7 @@ module.exports = (env, argv) => ({
         ]
     },
     plugins: [
-        new CleanWebpackPlugin('dist', {}),
+        new CleanWebpackPlugin('docs', {}),
         new MiniCssExtractPlugin({
             filename:
                 argv.mode === 'production'
@@ -70,7 +70,7 @@ module.exports = (env, argv) => ({
         })
     ],
     devServer: {
-        contentBase: 'dist',
+        contentBase: 'docs',
         watchContentBase: true,
         port: 1000
     }

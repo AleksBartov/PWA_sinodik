@@ -1,12 +1,12 @@
 const glob = require('glob');
 const fs = require('fs');
 
-const dest = 'dist/sw.js';
+const dest = 'docs/sw.js';
 const staticAssetsCacheName = 'todo-assets-v6';
 const dynamicCacheName = 'todo-dynamic-v6';
 
 let staticAssetsCacheFiles = glob
-    .sync('dist/**/*')
+    .sync('docs/**/*')
     .map((path) => {
         return path.slice(5);
     })

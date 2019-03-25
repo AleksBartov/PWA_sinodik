@@ -7,7 +7,7 @@ self.addEventListener('install', function (event) {
       caches.open(staticAssetsCacheName).then(function (cache) {
         cache.addAll([
             '/',
-            "chunks/todo.d41d8cd98f00b204e980.js","index.html","main.d41d8cd98f00b204e980.js"
+            "chunks/todo.d41d8cd98f00b204e980.js","chunks/todo.js","chunks/todo.js.map","index.html","main.d41d8cd98f00b204e980.js","main.js","main.js.map"
         ]
         );
       }).catch((error) => {
